@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Resume Agent",
+    "version": "1.0",
+    "description": "Upload resume and analyze job description on LinkedIn",
+    "permissions": ["scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "128": "icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/jobs/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
